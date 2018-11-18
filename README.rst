@@ -35,17 +35,14 @@ nameko-webargs supports Python >= 3.5
 
 
 
-Features
---------
-
-* TODO
-
 Credits
 -------
 
 This package was created with Cookiecutter_ and the `audreyr/cookiecutter-pypackage`_ project template.
+Inspired by webargs-sanic_ package.
 
 .. _Nameko: https://www.nameko.io
 .. _Webargs: https://github.com/sloria/webargs
 .. _Cookiecutter: https://github.com/audreyr/cookiecutter
 .. _`audreyr/cookiecutter-pypackage`: https://github.com/audreyr/cookiecutter-pypackage
+.. _webargs-sanic: https://github.com/EndurantDevs/webargs-sanic
