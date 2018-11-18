@@ -11,40 +11,46 @@ with open('README.rst') as readme_file:
 with open('HISTORY.rst') as history_file:
     history = history_file.read()
 
-requirements = [ ]
-
-setup_requirements = ['pytest-runner', ]
-
-test_requirements = ['pytest', ]
 
 setup(
+    name='nameko_webargs',
+    version='0.1.0',
     author="Spyros Markopoulos",
     author_email='mail.doctor46@gmail.com',
+    url='https://github.com/tyler46/nameko_webargs',
+    license="MIT license",
+    description="Nameko integration with Webargs",
+    long_description=readme + '\n\n' + history,
+    python_requires='>=3.5',
+    install_requires=[
+        "nameko>=2.11.0",
+        "webargs>=4.1.2"
+    ],
+    extras_require={
+        'test': [
+            "pytest>=3.8",
+            "coverage>=4.5",
+            "pytest-cov>=2.6",
+            "tox>=3.3",
+            "codecov>=2.0",
+        ],
+    },
+    setup_requires=[
+        "pytest-runner",
+    ],
+    packages=find_packages(include=['nameko_webargs']),
+    include_package_data=True,
+    zip_safe=False,
+    test_suite='tests',
+    keywords='nameko_webargs',
     classifiers=[
-        'Development Status :: 2 - Pre-Alpha',
+        'Development Status :: 5 - Production/Stable',
         'Intended Audience :: Developers',
         'License :: OSI Approved :: MIT License',
         'Natural Language :: English',
-        "Programming Language :: Python :: 2",
-        'Programming Language :: Python :: 2.7',
+        'Programming Language :: Python :: 3 :: Only',
         'Programming Language :: Python :: 3',
-        'Programming Language :: Python :: 3.4',
-        'Programming Language :: Python :: 3.5',
         'Programming Language :: Python :: 3.6',
         'Programming Language :: Python :: 3.7',
     ],
-    description="Nameko integration with Webargs",
-    install_requires=requirements,
-    license="MIT license",
-    long_description=readme + '\n\n' + history,
-    include_package_data=True,
-    keywords='nameko_webargs',
-    name='nameko_webargs',
-    packages=find_packages(include=['nameko_webargs']),
-    setup_requires=setup_requirements,
-    test_suite='tests',
-    tests_require=test_requirements,
-    url='https://github.com/tyler46/nameko_webargs',
-    version='0.1.0',
-    zip_safe=False,
 )
