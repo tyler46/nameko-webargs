@@ -190,7 +190,7 @@ class AppService(object):
             "load_from" if (MARSHMALLOW_VERSION_INFO[0] < 3) else "data_key": "X-Field"
         }
         args = {"x_field": fields.Nested({"id": fields.Int()}, many=True, **data_key_kwarg)}
-        parsed =parser.parse(args, request)
+        parsed = parser.parse(args, request)
         return Response(
             response=json.dumps(parsed),
             mimetype="application/json"

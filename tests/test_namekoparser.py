@@ -26,8 +26,8 @@ def test_echo_use_kwargs(web_session):
 
 
 def test_echo_multi(web_session):
-    res = web_session.get("/echo_multi", params={"name": ["John","Perry"]})
-    assert res.json() == {"name": ["John","Perry"]}
+    res = web_session.get("/echo_multi", params={"name": ["John", "Perry"]})
+    assert res.json() == {"name": ["John", "Perry"]}
 
 
 def test_echo_many_schema(web_session):

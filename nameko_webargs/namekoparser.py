@@ -1,4 +1,4 @@
-# pylint: disable=W0221,C0103
+# pylint: disable=W0221,C0103,no-member
 """Nameko HTTP entrypoint (Werkzeug) request argument parsing module.
 """
 import json
