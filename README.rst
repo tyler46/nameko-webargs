@@ -34,6 +34,17 @@ Installing
 nameko-webargs supports Python >= 3.5
 
 
+Usage
+------
+
+A real-world nameko example can be found at `examples` folder.
+First create a `.env` file by copying `env.example` and then run the following command
+from project root directory:
+
+.. code-block:: bash
+
+   env $(cat .env | grep "^[^#;]" | xargs) ./run.sh
+
 
 Credits
 -------
@@ -46,3 +57,5 @@ Inspired by webargs-sanic_ package.
 .. _Cookiecutter: https://github.com/audreyr/cookiecutter
 .. _`audreyr/cookiecutter-pypackage`: https://github.com/audreyr/cookiecutter-pypackage
 .. _webargs-sanic: https://github.com/EndurantDevs/webargs-sanic
+
+
